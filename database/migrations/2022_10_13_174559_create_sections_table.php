@@ -4,20 +4,21 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDirectionsTable extends Migration
+class CreateSectionsTable extends Migration
 {
     public function up()
     {
-        Schema::create('directions', function (Blueprint $table) {
+        Schema::create('sections', function (Blueprint $table) {
             $table->id();
             $table->jsonb('title');
             $table->jsonb('description')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('directions');
+        Schema::dropIfExists('sections');
     }
 }

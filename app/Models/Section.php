@@ -5,22 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
-class Doctor extends Model
+class Section extends Model
 {
     use HasTranslations;
 
     protected $fillable = [
-        'full_name',
-        'speciality',
-        'graphic',
-        'biography',
-        'photo',
+        'title',
+        'description',
+        'slug',
     ];
 
     public $translatable = [
-        'speciality',
-        'graphic',
-        'biography',
+        'title',
+        'description',
+        'slug',
     ];
 
 }
