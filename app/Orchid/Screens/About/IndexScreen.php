@@ -9,15 +9,22 @@ use Orchid\Support\Facades\Layout;
 
 class IndexScreen extends Screen
 {
+    private Section $about;
+
+    public function __construct()
+    {
+        $this->about = Section::where('slug', 'about')->first();
+    }
+
     public function name(): ?string
     {
-        return 'О нас';
+        return $this->about->title;
     }
 
     public function query(): iterable
     {
         return [
-            'description' => Section::where('slug', 'about')->value('description')
+            'description' => $this->about->description
         ];
     }
 
@@ -25,8 +32,8 @@ class IndexScreen extends Screen
     {
         return [
             Link::make(__('Edit'))
-                ->icon('icon-plus')
-                ->href(route('platform.about.edit')),
+                ->icon('icon-pencil')
+                ->href(route('platform.about.edit', $this->about->id)),
         ];
     }
 

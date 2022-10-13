@@ -18,20 +18,20 @@ class EditScreen extends TranslationsScreen
         return 'О нас';
     }
 
-    public function query(): iterable
+    public function query(Section $section): iterable
     {
         return [
-            'about' => Section::where('slug', 'about')->get()
+            'about' => $section->toArray()
         ];
     }
 
     protected function multiLanguageFields(): array
     {
         return [
-            Input::make('title')
+            Input::make('about.title')
                 ->placeholder('Введите заголовок')
                 ->title('Заголовок'),
-            Quill::make('description')
+            Quill::make('about.description')
                 ->placeholder('Введите описание')
                 ->title('Описание')
         ];
@@ -39,14 +39,12 @@ class EditScreen extends TranslationsScreen
 
     public function save(AboutRequest $aboutRequest)
     {
-        Section::where('slug', 'about')->update([
-            'title' => $aboutRequest->input('title'),
-            'description' => $aboutRequest->input('description'),
-        ]);
+        Section::where('slug', 'about')
+            ->update($aboutRequest->input('about'));
 
         Toast::info('Успешно сохранено!');
 
-        return redirect()->route('platform.');
+        return redirect()->route('platform.about.index');
     }
 
     public function commandBar(): array

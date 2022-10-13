@@ -11,6 +11,6 @@ Route::screen('/main', PlatformScreen::class)
 Route::screen('/about', \App\Orchid\Screens\About\IndexScreen::class)
     ->name('platform.about.index');
 
-Route::screen('/about/edit', \App\Orchid\Screens\About\EditScreen::class)
+Route::screen('/about/edit/{section}', \App\Orchid\Screens\About\EditScreen::class)
     ->name('platform.about.edit');
 
