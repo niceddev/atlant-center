@@ -11,8 +11,8 @@ class CreateServicesTable extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->jsonb('title');
-            $table->jsonb('content');
-            $table->string('banner');
+            $table->jsonb('content')->nullable();
+            $table->string('banner')->nullable();
             $table->timestamps();
         });
     }

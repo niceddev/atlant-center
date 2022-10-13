@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -227,6 +227,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+    ],
+
+    'languages' => [
+        'ru' => 'Рус',
+        'en' => 'Eng',
+        'kk' => 'Қаз'
     ],
 
 ];
