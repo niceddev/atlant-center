@@ -2,8 +2,8 @@
 
 namespace App\Orchid\Screens\About;
 
-use App\Http\Requests\AboutRequest;
 use App\Models\Section;
+use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Fields\Input;
@@ -30,17 +30,18 @@ class EditScreen extends TranslationsScreen
         return [
             Input::make('about.title')
                 ->placeholder('Введите заголовок')
-                ->title('Заголовок'),
+                ->title('Заголовок')
+                ->required(),
             Quill::make('about.description')
                 ->placeholder('Введите описание')
                 ->title('Описание')
         ];
     }
 
-    public function save(AboutRequest $aboutRequest)
+    public function save(Request $request)
     {
         Section::where('slug', 'about')
-            ->update($aboutRequest->input('about'));
+            ->update($request->input('about'));
 
         Toast::info('Успешно сохранено!');
 
