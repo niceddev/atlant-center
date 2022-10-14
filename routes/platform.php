@@ -24,4 +24,12 @@ Route::screen('/directions/form', \App\Orchid\Screens\Directions\CreateScreen::c
 Route::screen('/directions/form/{section}', \App\Orchid\Screens\Directions\EditScreen::class)
     ->name('platform.directions.edit');
 
+//Services
+Route::screen('/services', \App\Orchid\Screens\Services\IndexScreen::class)
+    ->name('platform.services.index');
 
+Route::screen('/services/form', \App\Orchid\Screens\Services\CreateScreen::class)
+    ->name('platform.services.create');
+
+Route::screen('/services/form/{section}', \App\Orchid\Screens\Services\EditScreen::class)
+    ->name('platform.services.edit');
