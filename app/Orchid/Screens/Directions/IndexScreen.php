@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Orchid\Screens\About;
+namespace App\Orchid\Screens\Directions;
 
+use App\Models\Direction;
 use App\Models\Section;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
@@ -9,38 +10,38 @@ use Orchid\Support\Facades\Layout;
 
 class IndexScreen extends Screen
 {
-    private Section $about;
+    private Section $directions;
 
     public function __construct()
     {
-        $this->about = Section::where('slug', 'about')->first();
+        $this->directions = Section::where('slug', 'directions')->first();
     }
 
     public function name(): ?string
     {
-        return $this->about->title;
+        return $this->directions->title;
     }
 
     public function query(): iterable
     {
         return [
-            'description' => $this->about->description
+            'directions' => Direction::get()
         ];
     }
 
     public function commandBar(): array
     {
         return [
-            Link::make(__('Edit'))
-                ->icon('icon-pencil')
-                ->href(route('platform.about.edit', $this->about->id)),
+            Link::make(__('Add'))
+                ->icon('icon-plus')
+                ->href(route('platform.directions.create')),
         ];
     }
 
     public function layout(): iterable
     {
         return [
-            Layout::view('about')
+            Layout::view('directions')
         ];
     }
 }
