@@ -43,3 +43,13 @@ Route::screen('/doctors/form', \App\Orchid\Screens\Doctors\CreateScreen::class)
 
 Route::screen('/doctors/form/{section}', \App\Orchid\Screens\Doctors\EditScreen::class)
     ->name('platform.doctors.edit');
+
+//Reviews
+Route::screen('/reviews', \App\Orchid\Screens\Reviews\IndexScreen::class)
+    ->name('platform.reviews.index');
+
+Route::screen('/reviews/form', \App\Orchid\Screens\Reviews\CreateScreen::class)
+    ->name('platform.reviews.create');
+
+Route::screen('/reviews/form/{section}', \App\Orchid\Screens\Reviews\EditScreen::class)
+    ->name('platform.reviews.edit');

@@ -10,5 +10,6 @@ return [
     'speciality' => 'Мамандығы',
     'graphic' => 'Жұмыс уақыты',
     'biography' => 'Өмірбаян',
+    'info' => 'Қысқаша',
 
 ];

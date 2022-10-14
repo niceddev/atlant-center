@@ -10,5 +10,6 @@ return [
     'speciality' => 'Speciality',
     'graphic' => 'Work time',
     'biography' => 'Biography',
+    'info' => 'Short information',
 
 ];

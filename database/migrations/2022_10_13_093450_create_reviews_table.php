@@ -12,7 +12,7 @@ class CreateReviewsTable extends Migration
             $table->id();
             $table->text('content');
             $table->string('full_name');
-            $table->string('info');
+            $table->string('info')->nullable();
             $table->timestamps();
         });
     }
