@@ -11,5 +11,8 @@ return [
     'graphic' => 'Жұмыс уақыты',
     'biography' => 'Өмірбаян',
     'info' => 'Қысқаша',
+    'our_contacts' => 'Біздің байланыстар',
+    'opening_hours' => 'Жұмыс уақыты',
+    'social_network' => 'Әлеуметтік медиа',
 
 ];

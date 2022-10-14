@@ -53,3 +53,10 @@ Route::screen('/reviews/form', \App\Orchid\Screens\Reviews\CreateScreen::class)
 
 Route::screen('/reviews/form/{section}', \App\Orchid\Screens\Reviews\EditScreen::class)
     ->name('platform.reviews.edit');
+
+//Gallery
+Route::screen('/gallery', \App\Orchid\Screens\Gallery\IndexScreen::class)
+    ->name('platform.gallery.index');
+
+Route::screen('/gallery/form', \App\Orchid\Screens\Gallery\CreateScreen::class)
+    ->name('platform.gallery.create');

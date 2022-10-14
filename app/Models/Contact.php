@@ -9,6 +9,18 @@ class Contact extends Model
 {
     use HasTranslations;
 
-    public $translatable = [];
+    protected $fillable = [
+        'address',
+        'phone_number',
+        'whatsapp_number',
+        'email',
+        'graphic',
+        'instagram_link'
+    ];
+
+    public $translatable = [
+        'address',
+        'graphic'
+    ];
 
 }

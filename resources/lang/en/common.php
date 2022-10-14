@@ -11,5 +11,8 @@ return [
     'graphic' => 'Work time',
     'biography' => 'Biography',
     'info' => 'Short information',
+    'our_contacts' => 'Our Contacts',
+    'opening_hours' => 'Opening hours',
+    'social_network' => 'Social networks',
 
 ];

@@ -11,5 +11,8 @@ return [
     'graphic' => 'График',
     'biography' => 'Биография',
     'info' => 'Краткая информация',
+    'our_contacts' => 'Наши контакты',
+    'opening_hours' => 'Часы работы',
+    'social_network' => 'Социальные сети',
 
 ];

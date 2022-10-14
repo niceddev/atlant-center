@@ -38,6 +38,9 @@ class PlatformProvider extends OrchidServiceProvider
             Menu::make('Отзывы')
                 ->icon('monitor')
                 ->route('platform.reviews.index'),
+            Menu::make('Галлерея')
+                ->icon('monitor')
+                ->route('platform.gallery.index'),
         ];
     }
 
