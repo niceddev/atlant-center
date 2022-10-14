@@ -32,7 +32,6 @@ class IndexScreen extends Screen
     {
         return [
             Link::make(__('Edit'))
-                ->icon('icon-pencil')
                 ->href(route('platform.about.edit', $this->about->id)),
         ];
     }

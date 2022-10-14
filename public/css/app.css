@@ -468,29 +468,62 @@ video {
 .table {
   display: table !important;
 }
+.h-16 {
+  height: 4rem !important;
+}
 .w-full {
   width: 100% !important;
 }
-.table-auto {
-  table-layout: auto !important;
+.whitespace-nowrap {
+  white-space: nowrap !important;
 }
-.border-collapse {
-  border-collapse: collapse !important;
+.rounded {
+  border-radius: 0.25rem !important;
 }
 .bg-white {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
+.bg-zinc-600 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity)) !important;
+}
 .p-10 {
   padding: 2.5rem !important;
+}
+.p-3 {
+  padding: 0.75rem !important;
+}
+.py-10 {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+.px-10 {
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+.text-center {
+  text-align: center !important;
 }
 .text-4xl {
   font-size: 2.25rem !important;
   line-height: 2.5rem !important;
 }
+.text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color) !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+.hover\:bg-zinc-100:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity)) !important;
+}
+.hover\:bg-zinc-300:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(212 212 216 / var(--tw-bg-opacity)) !important;
 }
 

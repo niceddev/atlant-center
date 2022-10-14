@@ -2,9 +2,11 @@
 
 namespace App\Orchid\Screens\Directions;
 
+use App\Models\Direction;
 use App\Models\Section;
 use App\Orchid\Screens\Abstraction\TranslationsScreen;
 use Illuminate\Http\Request;
+use Orchid\Support\Facades\Toast;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Fields\Input;
@@ -14,24 +16,22 @@ class CreateScreen extends TranslationsScreen
 {
     public function name(): ?string
     {
-        return 'О нас';
+        return Section::where('slug', 'directions')->first()->title;
     }
 
-    public function query(Section $section): iterable
+    public function query(): iterable
     {
-        return [
-            'about' => $section->toArray()
-        ];
+        return [];
     }
 
     protected function multiLanguageFields(): array
     {
         return [
-            Input::make('about.title')
+            Input::make('directions.title')
                 ->placeholder('Введите заголовок')
                 ->title('Заголовок')
                 ->required(),
-            Quill::make('about.description')
+            Quill::make('directions.description')
                 ->placeholder('Введите описание')
                 ->title('Описание')
         ];
@@ -39,22 +39,19 @@ class CreateScreen extends TranslationsScreen
 
     public function save(Request $request)
     {
-        Section::where('slug', 'about')
-            ->update($request->input('about'));
+        Direction::create($request->input('directions'));
 
         Toast::info('Успешно сохранено!');
 
-        return redirect()->route('platform.about.index');
+        return redirect()->route('platform.directions.index');
     }
 
     public function commandBar(): array
     {
         return [
             Link::make(__('Cancel'))
-                ->icon('icon-plus')
-                ->href(route('platform.about.index')),
+                ->href(route('platform.directions.index')),
             Button::make(__('Save'))
-                ->icon('icon-check')
                 ->method('save'),
         ];
     }

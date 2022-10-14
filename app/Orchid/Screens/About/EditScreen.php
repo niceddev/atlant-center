@@ -13,15 +13,19 @@ use App\Orchid\Screens\Abstraction\TranslationsScreen;
 
 class EditScreen extends TranslationsScreen
 {
+    private Section $section;
+
     public function name(): ?string
     {
-        return 'О нас';
+        return $this->section->title;
     }
 
     public function query(Section $section): iterable
     {
+        $this->section = $section;
+
         return [
-            'about' => $section->toArray()
+            'about' => $this->section->toArray()
         ];
     }
 
@@ -52,10 +56,8 @@ class EditScreen extends TranslationsScreen
     {
         return [
             Link::make(__('Cancel'))
-                ->icon('icon-plus')
                 ->href(route('platform.about.index')),
             Button::make(__('Save'))
-                ->icon('icon-check')
                 ->method('save'),
         ];
     }

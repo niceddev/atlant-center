@@ -2,6 +2,7 @@
 
 namespace App\Orchid\Screens\Directions;
 
+use App\Models\Direction;
 use App\Models\Section;
 use App\Orchid\Screens\Abstraction\TranslationsScreen;
 use Illuminate\Http\Request;
@@ -13,49 +14,61 @@ use Orchid\Support\Facades\Toast;
 
 class EditScreen extends TranslationsScreen
 {
+    private Direction $direction;
+
     public function name(): ?string
     {
-        return 'О нас';
+        return Section::where('slug', 'directions')->first()->title;
     }
 
-    public function query(Section $section): iterable
+    public function query(Direction $direction): iterable
     {
+        $this->direction = $direction;
+
         return [
-            'about' => $section->toArray()
+            'direction' => $this->direction->toArray()
         ];
     }
 
     protected function multiLanguageFields(): array
     {
         return [
-            Input::make('about.title')
+            Input::make('direction.title')
                 ->placeholder('Введите заголовок')
                 ->title('Заголовок')
                 ->required(),
-            Quill::make('about.description')
+            Quill::make('direction.description')
                 ->placeholder('Введите описание')
                 ->title('Описание')
         ];
     }
 
-    public function save(Request $request)
+    public function save(Direction $direction, Request $request)
     {
-        Section::where('slug', 'about')
-            ->update($request->input('about'));
+        $direction->update($request->input('direction'));
 
         Toast::info('Успешно сохранено!');
 
-        return redirect()->route('platform.about.index');
+        return redirect()->route('platform.directions.index');
+    }
+
+    public function remove(Direction $direction)
+    {
+        $direction->delete();
+
+        Toast::info('Удалено!');
+
+        return redirect()->route('platform.directions.index');
     }
 
     public function commandBar(): array
     {
         return [
+            Button::make(__('Remove'))
+                ->method('remove'),
             Link::make(__('Cancel'))
-                ->icon('icon-plus')
-                ->href(route('platform.about.index')),
+                ->href(route('platform.directions.index')),
             Button::make(__('Save'))
-                ->icon('icon-check')
                 ->method('save'),
         ];
     }

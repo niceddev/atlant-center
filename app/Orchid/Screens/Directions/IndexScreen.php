@@ -33,7 +33,6 @@ class IndexScreen extends Screen
     {
         return [
             Link::make(__('Add'))
-                ->icon('icon-plus')
                 ->href(route('platform.directions.create')),
         ];
     }
