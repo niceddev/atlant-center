@@ -60,3 +60,10 @@ Route::screen('/gallery', \App\Orchid\Screens\Gallery\IndexScreen::class)
 
 Route::screen('/gallery/form', \App\Orchid\Screens\Gallery\CreateScreen::class)
     ->name('platform.gallery.create');
+
+//Contacts
+Route::screen('/contacts', \App\Orchid\Screens\Contacts\IndexScreen::class)
+    ->name('platform.contacts.index');
+
+Route::screen('/contacts/form/{section}', \App\Orchid\Screens\Contacts\EditScreen::class)
+    ->name('platform.contacts.edit');
