@@ -18,6 +18,7 @@ class Doctor extends Model
     ];
 
     public $translatable = [
+        'full_name',
         'speciality',
         'graphic',
         'biography',

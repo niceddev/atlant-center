@@ -33,3 +33,13 @@ Route::screen('/services/form', \App\Orchid\Screens\Services\CreateScreen::class
 
 Route::screen('/services/form/{section}', \App\Orchid\Screens\Services\EditScreen::class)
     ->name('platform.services.edit');
+
+//Doctors
+Route::screen('/doctors', \App\Orchid\Screens\Doctors\IndexScreen::class)
+    ->name('platform.doctors.index');
+
+Route::screen('/doctors/form', \App\Orchid\Screens\Doctors\CreateScreen::class)
+    ->name('platform.doctors.create');
+
+Route::screen('/doctors/form/{section}', \App\Orchid\Screens\Doctors\EditScreen::class)
+    ->name('platform.doctors.edit');

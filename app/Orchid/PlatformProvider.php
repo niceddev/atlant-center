@@ -32,6 +32,9 @@ class PlatformProvider extends OrchidServiceProvider
             Menu::make('Услуги')
                 ->icon('monitor')
                 ->route('platform.services.index'),
+            Menu::make('Врачи')
+                ->icon('monitor')
+                ->route('platform.doctors.index'),
         ];
     }
 

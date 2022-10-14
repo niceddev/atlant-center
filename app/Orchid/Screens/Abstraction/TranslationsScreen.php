@@ -18,7 +18,7 @@ abstract class TranslationsScreen extends Screen
     {
         return array_merge(
             $this->generateTabs($this->multiLanguageFields()),
-            $this->singleLanguageFields()
+            $this->singleLanguageFields(),
         );
     }
 

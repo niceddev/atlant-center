@@ -6,4 +6,9 @@ return [
     'action' => 'Действие',
     'edit' => 'Изменить',
     'remove' => 'Удалить',
+    'full_name' => 'ФИО',
+    'speciality' => 'Специальность',
+    'graphic' => 'График',
+    'biography' => 'Биография',
+
 ];

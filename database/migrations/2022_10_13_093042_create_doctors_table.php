@@ -10,7 +10,7 @@ class CreateDoctorsTable extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name');
+            $table->jsonb('full_name');
             $table->jsonb('speciality')->nullable();
             $table->jsonb('graphic')->nullable();
             $table->jsonb('biography')->nullable();
