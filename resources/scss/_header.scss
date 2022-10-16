@@ -1,0 +1,261 @@
+
+.header {
+    width: 100%;
+
+    // .header__container
+
+    &__container {
+        max-width: $maxWidthContainer + px;
+        padding: 0 20px;
+        margin: 0 auto;
+        
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        gap: 20px;
+    }
+
+    // .header__logo
+
+    &__logo {
+        z-index: 5;
+        flex: 0 1 8.3%;
+        position: relative;
+        min-height: 90px;
+        img {
+            position: absolute;
+            height: 100%;
+            
+        }
+        @media (max-width: 1240px) {
+            min-height: 70px;
+            
+        }
+        @media (max-width: $mobile + px) {
+            flex: 0 1 12%;
+        }
+        
+    }
+
+    &__lang {
+        flex: 0 1 8.3%;
+        position: relative;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            .lang__list {
+                visibility: visible;
+                opacity: 1;
+                }
+            }
+    }
+
+
+    // .header__menu
+
+    &__menu {
+        flex: 1 1 auto;
+        
+        
+        
+    }
+
+    // .header__links
+
+    &__links {
+        display: flex;
+        align-items: center;
+        @media (max-width: $mobile + px) {
+            flex: 1 1 auto;
+            justify-content: space-between;
+        }
+        
+    }
+
+    // .header__phone
+
+    &__phone {
+        z-index: 4;
+        min-width: 160px;
+        line-height: 22px;
+        color: $blackColor;
+        margin-right: 30px;
+    }
+
+    // .header__social
+
+    &__social {
+        
+        
+    }
+}
+
+.lang {
+    a {
+        color: $blackColor;
+    }
+
+
+    &__list {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+        a {
+            color: $blackColor;
+        }
+    }
+
+    &__items {
+        padding: 5px 0 0 0;
+    }
+}
+
+
+.menu {
+    @media (max-width: $mobile + px) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        background-color: $lightGreyColor;
+        transition: all 0.3s ease 0s;
+    }
+    
+
+    &._active {
+        top: 0;
+    }
+
+    // .menu__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: $mobile + px){
+            flex-direction: column;
+            padding: 120px 50px 50px 50px;
+            align-items: center;
+        }
+    }
+
+    // .menu__items
+
+    &__items {
+        padding: 5px 0;
+        &:not(:last-child){
+            @include adaptive-value("margin-right", 40, 20, 1);
+            
+        }
+    }
+
+    // .menu__item
+
+    &__item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: $blackColor;
+        @media (max-width: 1240px) {
+            font-size: 16px;
+            
+        }
+        @media (max-width: $mobile + px){
+            font-size: 36px;
+            line-height: 140%;
+            text-align: center;
+        }
+    }
+}
+.social {
+
+    @media (max-width: $mobile + px){
+        display: none;
+    }
+
+    // .social__list
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    // .social__items
+
+    &__items {
+        margin-left: 10px;
+    }
+
+    // .social__icon
+
+    &__icon {
+        display: block;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: $greenColor;
+        position: relative;
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+
+.icon-menu {
+    display: none;
+    @media (max-width: $mobile + px) {
+        position: relative;
+        display: block;
+        justify-self: flex-end;
+        flex: 0 0 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 5;
+        span {
+            transition: all 0.3s ease 0s;
+            top: calc(50% - 1px);
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $blackColor;
+            &:first-child {
+                top: 0px;
+            }
+            &:last-child {
+                top: auto;
+                bottom: 0px;
+            }
+
+        }
+        &.header-inner {
+            span {
+                background-color: $blackColor;
+            }
+        }
+
+        &._active {
+            span{
+                transform: scale(0);
+                &:first-child {
+                transform: rotate(-45deg);
+                top: calc(50% - 1px);
+                }
+
+                &:last-child {
+                transform: rotate(45deg);
+                bottom: calc(50% - 1px);
+                }
+            }
+        }
+    }
+}

@@ -8,10 +8,7 @@ Route::screen('/main', PlatformScreen::class)
     ->name('platform.main');
 
 //About
-Route::screen('/about', \App\Orchid\Screens\About\IndexScreen::class)
-    ->name('platform.about.index');
-
-Route::screen('/about/form/{section}', \App\Orchid\Screens\About\EditScreen::class)
+Route::screen('/about/form', \App\Orchid\Screens\About\EditScreen::class)
     ->name('platform.about.edit');
 
 //Directions
@@ -62,8 +59,12 @@ Route::screen('/gallery/form', \App\Orchid\Screens\Gallery\CreateScreen::class)
     ->name('platform.gallery.create');
 
 //Contacts
-Route::screen('/contacts', \App\Orchid\Screens\Contacts\IndexScreen::class)
-    ->name('platform.contacts.index');
-
-Route::screen('/contacts/form/{section}', \App\Orchid\Screens\Contacts\EditScreen::class)
+Route::screen('/contacts/form', \App\Orchid\Screens\Contacts\EditScreen::class)
     ->name('platform.contacts.edit');
+
+//Sections
+Route::screen('/sections', \App\Orchid\Screens\Sections\IndexScreen::class)
+    ->name('platform.sections.index');
+
+Route::screen('/sections/form/{section}', \App\Orchid\Screens\Sections\EditScreen::class)
+    ->name('platform.sections.edit');

@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Orchid\Screens\Contacts;
+namespace App\Orchid\Screens\Sections;
 
-use App\Models\Contact;
+use App\Models\Direction;
 use App\Models\Section;
-use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
 
@@ -12,28 +11,25 @@ class IndexScreen extends Screen
 {
     public function name(): ?string
     {
-        return Section::where('slug', 'contacts')->first();
+        return 'Секции';
     }
 
     public function query(): iterable
     {
         return [
-            'contact' => Contact::get()
+            'sections' => Section::get()
         ];
     }
 
     public function commandBar(): array
     {
-        return [
-            Link::make(__('Add'))
-                ->href(route('platform.gallery.create')),
-        ];
+        return [];
     }
 
     public function layout(): iterable
     {
         return [
-            Layout::view('gallery')
+            Layout::view('panel.index')
         ];
     }
 }

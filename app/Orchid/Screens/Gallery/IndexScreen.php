@@ -40,7 +40,7 @@ class IndexScreen extends Screen
     public function layout(): iterable
     {
         return [
-            Layout::view('gallery')
+            Layout::view('panel.gallery')
         ];
     }
 }

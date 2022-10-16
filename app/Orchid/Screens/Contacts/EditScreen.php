@@ -3,15 +3,14 @@
 namespace App\Orchid\Screens\Contacts;
 
 use App\Models\Contact;
-use App\Models\Doctor;
 use App\Models\Section;
 use App\Orchid\Screens\Abstraction\TranslationsScreen;
 use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
-use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Picture;
 use Orchid\Screen\Fields\Quill;
+use Orchid\Screen\Fields\TextArea;
 use Orchid\Support\Facades\Layout;
 use Orchid\Support\Facades\Toast;
 
@@ -19,49 +18,64 @@ class EditScreen extends TranslationsScreen
 {
     public function name(): ?string
     {
-        return Section::where('slug', 'directions')->first()->title;
+        return Section::where('slug', 'contacts')->first()->title;
     }
 
-    public function query(Contact $contact): iterable
+    public function query(): iterable
     {
         return [
-            'contact' => $contact->toArray()
+            'contacts' => Contact::first()->toArray()
         ];
     }
 
     protected function multiLanguageFields(): array
     {
         return [
-            Input::make('doctor.full_name')
-                ->placeholder('ФИО врача')
-                ->title('Введите ФИО врача')
+            TextArea::make('contacts.address')
+                ->placeholder('Введите адрес')
+                ->title('Адрес')
                 ->required(),
-            Input::make('doctor.speciality')
-                ->placeholder('Введите специальность врача')
-                ->title('Специальность врача'),
-            Quill::make('doctor.graphic')
-                ->placeholder('График')
-                ->title('График врача'),
-            Quill::make('doctor.biography')
-                ->placeholder('Введите биографию врача')
-                ->title('Биография врача')
+            Quill::make('contacts.graphic')
+                ->placeholder('Введите график работы')
+                ->title('График работы'),
         ];
     }
 
-    public function save(Contact $contact, Request $request)
+    protected function singleLanguageFields(): array
     {
-        $contact->update($request->input('contact'));
+        return [
+            Layout::rows([
+                Input::make('contacts.phone_number')
+                    ->placeholder('Введите номер телефона')
+                    ->title('Номер телефона'),
+                Input::make('contacts.whatsapp_number')
+                    ->placeholder('Введите номер телефона')
+                    ->title('Номер телефона Whatsapp'),
+                Input::make('contacts.email')
+                    ->placeholder('Введите почту')
+                    ->type('email')
+                    ->title('Введите почту'),
+                Input::make('contacts.instagram_link')
+                    ->placeholder('Введите ссылку на инстаграм')
+                    ->type('url')
+                    ->title('Введите ссылку инстаграмма'),
+            ])
+        ];
+    }
+
+    public function save(Request $request)
+    {
+        Contact::first()
+            ->update($request->input('contacts'));
 
         Toast::info('Успешно сохранено!');
 
-        return redirect()->route('platform.doctors.index');
+        return redirect()->route('platform.contacts.edit');
     }
 
     public function commandBar(): array
     {
         return [
-            Link::make(__('Cancel'))
-                ->href(route('platform.contacts.index')),
             Button::make(__('Save'))
                 ->method('save'),
         ];

@@ -24,26 +24,29 @@ class PlatformProvider extends OrchidServiceProvider
     {
         return [
             Menu::make('О нас')
-                ->icon('monitor')
-                ->route('platform.about.index'),
+                ->icon('info')
+                ->route('platform.about.edit'),
             Menu::make('Направления')
-                ->icon('monitor')
+                ->icon('directions')
                 ->route('platform.directions.index'),
             Menu::make('Услуги')
-                ->icon('monitor')
+                ->icon('list')
                 ->route('platform.services.index'),
             Menu::make('Врачи')
-                ->icon('monitor')
+                ->icon('people')
                 ->route('platform.doctors.index'),
             Menu::make('Отзывы')
-                ->icon('monitor')
+                ->icon('bubble')
                 ->route('platform.reviews.index'),
-            Menu::make('Галлерея')
-                ->icon('monitor')
+            Menu::make('Галерея')
+                ->icon('picture')
                 ->route('platform.gallery.index'),
             Menu::make('Контакты')
-                ->icon('monitor')
-                ->route('platform.contacts.index'),
+                ->icon('pointer')
+                ->route('platform.contacts.edit'),
+            Menu::make('Секции')
+                ->icon('menu')
+                ->route('platform.sections.index'),
         ];
     }
 

@@ -11,8 +11,8 @@ class CreateContactsTable extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->jsonb('address');
-            $table->integer('phone_number')->nullable();
-            $table->integer('whatsapp_number')->nullable();
+            $table->string('phone_number')->nullable();
+            $table->string('whatsapp_number')->nullable();
             $table->string('email')->nullable();
             $table->jsonb('graphic')->nullable();
             $table->string('instagram_link')->nullable();

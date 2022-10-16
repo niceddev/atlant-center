@@ -5,12 +5,15 @@
             Пусто
         </h1>
     @else
-        @foreach($gallery as $image)
-            {{ dd($image) }}
-            <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <img class="rounded-t-lg" src="{{ $image->path }}" alt="" />
-            </div>
-        @endforeach
+        <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+
+            @foreach($gallery as $image)
+                <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+                    <img class="w-full max-h-96 rounded-t-lg" style="object-fit: contain" src="{{ asset($image->path) }}" alt="" />
+                </div>
+            @endforeach
+
+        </div>
     @endif
 
 </div>

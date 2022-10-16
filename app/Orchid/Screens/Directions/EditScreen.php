@@ -14,8 +14,6 @@ use Orchid\Support\Facades\Toast;
 
 class EditScreen extends TranslationsScreen
 {
-    private Direction $direction;
-
     public function name(): ?string
     {
         return Section::where('slug', 'directions')->first()->title;
@@ -23,10 +21,8 @@ class EditScreen extends TranslationsScreen
 
     public function query(Direction $direction): iterable
     {
-        $this->direction = $direction;
-
         return [
-            'direction' => $this->direction->toArray()
+            'direction' => $direction->toArray()
         ];
     }
 
