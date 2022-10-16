@@ -8,7 +8,6 @@ use App\Orchid\Screens\Abstraction\TranslationsScreen;
 use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Fields\Input;
-use Orchid\Screen\Fields\Picture;
 use Orchid\Screen\Fields\Quill;
 use Orchid\Screen\Fields\TextArea;
 use Orchid\Support\Facades\Layout;

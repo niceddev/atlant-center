@@ -32,9 +32,6 @@ class EditScreen extends TranslationsScreen
                 ->placeholder('Введите заголовок')
                 ->title('Заголовок')
                 ->required(),
-            Quill::make('section.description')
-                ->placeholder('Введите описание')
-                ->title('Описание')
         ];
     }
 

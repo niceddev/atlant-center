@@ -4,6 +4,7 @@ namespace App\Orchid\Screens\Sections;
 
 use App\Models\Direction;
 use App\Models\Section;
+use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
 
@@ -29,7 +30,7 @@ class IndexScreen extends Screen
     public function layout(): iterable
     {
         return [
-            Layout::view('panel.index')
+            Layout::view('panel.sections')
         ];
     }
 }

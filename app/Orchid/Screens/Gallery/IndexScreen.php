@@ -7,7 +7,6 @@ use App\Models\Section;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
-use Orchid\Support\Facades\Toast;
 
 class IndexScreen extends Screen
 {
