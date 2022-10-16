@@ -11,11 +11,13 @@ class Section extends Model
 
     protected $fillable = [
         'title',
+        'description',
         'slug',
     ];
 
     public $translatable = [
         'title',
+        'description',
     ];
 
 }

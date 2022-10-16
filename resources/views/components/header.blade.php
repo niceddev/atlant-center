@@ -13,8 +13,8 @@
             </div>
             <nav class="header__menu menu">
                 <ul class="menu__list">
-                    @foreach($sectionsList as $slug => $item)
-                        <li class="menu__items"><a href="#{{ $slug }}" class="menu__item">{{ $item->title }}</a></li>
+                    @foreach($sections as $key => $title)
+                        <li class="menu__items"><a href="#{{ $key }}" class="menu__item">{{ $title->getTranslation('title', 'ru') }}</a></li>
                     @endforeach
                 </ul>
             </nav>

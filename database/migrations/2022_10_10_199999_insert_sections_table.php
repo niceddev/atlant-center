@@ -12,11 +12,17 @@ class InsertSectionsTable extends Migration
                 'title' => json_encode([
                     'ru' => 'О нас',
                 ]),
+                'description' => json_encode([
+                    'ru' => null,
+                ]),
                 'slug' => 'about',
             ],
             [
                 'title' => json_encode([
                     'ru' => 'Направления',
+                ]),
+                'description' => json_encode([
+                    'ru' => null,
                 ]),
                 'slug' => 'directions',
             ],
@@ -24,11 +30,17 @@ class InsertSectionsTable extends Migration
                 'title' => json_encode([
                     'ru' => 'Услуги',
                 ]),
+                'description' => json_encode([
+                    'ru' => 'Последние достижения спортивной медицины доступны теперь не только профессиональным спортсменам, но и каждому казахстанцу!',
+                ]),
                 'slug' => 'services',
             ],
             [
                 'title' => json_encode([
                     'ru' => 'Врачи',
+                ]),
+                'description' => json_encode([
+                    'ru' => 'Наши специалисты в кратчайшие сроки помогут Вам восстановиться после ортопедической операции или травмы и вернуться к своему привычному образу жизни.',
                 ]),
                 'slug' => 'doctors',
             ],
@@ -36,17 +48,26 @@ class InsertSectionsTable extends Migration
                 'title' => json_encode([
                     'ru' => 'Отзывы',
                 ]),
+                'description' => json_encode([
+                    'ru' => null,
+                ]),
                 'slug' => 'reviews',
             ],
             [
                 'title' => json_encode([
                     'ru' => 'Галерея',
                 ]),
+                'description' => json_encode([
+                    'ru' => null,
+                ]),
                 'slug' => 'gallery',
             ],
             [
                 'title' => json_encode([
                     'ru' => 'Контакты',
+                ]),
+                'description' => json_encode([
+                    'ru' => null,
                 ]),
                 'slug' => 'contacts',
             ],

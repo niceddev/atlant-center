@@ -1,6 +1,6 @@
 <section class="activities">
     <div class="activities__container _container">
-        <h5 class="activities__title">{{ $directionsData->getTranslation('title', 'ru') }}</h5>
+        <h5 class="activities__title">{{ $sections['directions']->getTranslation('title', 'ru') }}</h5>
         <div class="activities__body">
             <ul class="activities__list">
                 @foreach($directions as $direction)
