@@ -15,12 +15,12 @@
     ></x-directions>
 
     <x-services
-        :services="$services"
+        :services='$services'
     ></x-services>
 
-{{--    <x-doctors--}}
-{{--        :sections='$sections'--}}
-{{--    ></x-doctors>--}}
+    <x-doctors
+        :doctors='$doctors'
+    ></x-doctors>
 
 {{--    <x-reviews--}}
 {{--        :sections='$sections'--}}
