@@ -2,18 +2,23 @@
 
 namespace App\Orchid\Screens\About;
 
+use App\Models\About;
 use App\Models\Section;
 use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
-use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Fields\Input;
-use Orchid\Screen\Fields\Quill;
+use Orchid\Screen\Fields\SimpleMDE;
 use Orchid\Support\Facades\Toast;
 use App\Orchid\Screens\Abstraction\TranslationsScreen;
 
 class EditScreen extends TranslationsScreen
 {
     private Section $section;
+
+    public function __construct()
+    {
+        $this->section = Section::where('slug', 'about')->first();
+    }
 
     public function name(): ?string
     {
@@ -22,30 +27,33 @@ class EditScreen extends TranslationsScreen
 
     public function query(): iterable
     {
-        $this->section = Section::where('slug', 'about')->first();
-
         return [
-            'about' => $this->section->toArray()
+            'about' => About::first()->toArray(),
+            'section' => $this->section->toArray(),
         ];
     }
 
     protected function multiLanguageFields(): array
     {
         return [
-            Input::make('about.title')
+            Input::make('section.title')
                 ->placeholder('Введите заголовок')
                 ->title('Заголовок')
                 ->required(),
-            Quill::make('about.description')
+            SimpleMDE::make('about.description')
                 ->placeholder('Введите описание')
-                ->title('Описание')
+                ->title('Описание'),
+            Input::make('about.list_title')
+                ->title('Заголовок списка'),
+            SimpleMDE::make('about.list')
+                ->title('Список'),
         ];
     }
 
     public function save(Request $request)
     {
-        Section::where('slug', 'about')
-            ->update($request->input('about'));
+        $this->section->update($request->input('section'));
+        About::first()->update($request->input('about'));
 
         Toast::info('Успешно сохранено!');
 

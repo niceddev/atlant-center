@@ -58,13 +58,16 @@ Route::screen('/gallery', \App\Orchid\Screens\Gallery\IndexScreen::class)
 Route::screen('/gallery/form', \App\Orchid\Screens\Gallery\CreateScreen::class)
     ->name('platform.gallery.create');
 
-//Contacts
-Route::screen('/contacts/form', \App\Orchid\Screens\Contacts\EditScreen::class)
-    ->name('platform.contacts.edit');
+Route::screen('/gallery/{section}', \App\Orchid\Screens\Gallery\DestroyScreen::class)
+    ->name('platform.gallery.destroy');
 
-//Sections
-Route::screen('/sections', \App\Orchid\Screens\Sections\IndexScreen::class)
-    ->name('platform.sections.index');
-
-Route::screen('/sections/form/{section}', \App\Orchid\Screens\Sections\EditScreen::class)
-    ->name('platform.sections.edit');
+////Contacts
+//Route::screen('/contacts/form', \App\Orchid\Screens\Contacts\EditScreen::class)
+//    ->name('platform.contacts.edit');
+//
+////Sections
+//Route::screen('/sections', \App\Orchid\Screens\Sections\IndexScreen::class)
+//    ->name('platform.sections.index');
+//
+//Route::screen('/sections/form/{section}', \App\Orchid\Screens\Sections\EditScreen::class)
+//    ->name('platform.sections.edit');

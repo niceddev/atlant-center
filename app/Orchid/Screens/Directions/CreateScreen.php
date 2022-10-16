@@ -6,6 +6,8 @@ use App\Models\Direction;
 use App\Models\Section;
 use App\Orchid\Screens\Abstraction\TranslationsScreen;
 use Illuminate\Http\Request;
+use Orchid\Screen\Fields\Picture;
+use Orchid\Support\Facades\Layout;
 use Orchid\Support\Facades\Toast;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Actions\Link;
@@ -34,6 +36,16 @@ class CreateScreen extends TranslationsScreen
             Quill::make('directions.description')
                 ->placeholder('Введите описание')
                 ->title('Описание')
+        ];
+    }
+
+    protected function singleLanguageFields(): array
+    {
+        return [
+            Layout::rows([
+                Picture::make('icon_path')
+                    ->title('Прикрепите иконку')
+            ])
         ];
     }
 

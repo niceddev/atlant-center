@@ -14,10 +14,10 @@
                         {{ __('common.title') }}
                     </th>
                     <th scope="col" class="py-3 px-6">
-                        {{ __('common.info') }}
+                        {{ __('common.description') }}
                     </th>
                     <th scope="col" class="py-3 px-6">
-                        {{ __('common.description') }}
+                        {{ __('common.info') }}
                     </th>
                     <th scope="col" class="py-3 px-6">
                         {{ __('common.action') }}
@@ -34,14 +34,14 @@
                             {{ $review->full_name }}
                         </td>
                         <td class="py-4 px-6">
-                            {{ $review->info }}
-                        </td>
-                        <td class="py-4 px-6">
                             {!!
                                 (strlen($review->content) > 50)
                                 ? substr($review->content, 0, 50) . '...'
                                 : $review->content
                             !!}
+                        </td>
+                        <td class="py-4 px-6">
+                            {{ $review->info }}
                         </td>
                         <td class="py-4 px-6">
                             <a href="{{ route('platform.reviews.edit', $review->id) }}" class="hover:bg-gray-300 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">

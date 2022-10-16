@@ -10,16 +10,16 @@ use Orchid\Support\Facades\Layout;
 
 class IndexScreen extends Screen
 {
-    private Section $reviews;
+    private Section $section;
 
     public function __construct()
     {
-        $this->reviews = Section::where('slug', 'reviews')->first();
+        $this->section = Section::where('slug', 'reviews')->first();
     }
 
     public function name(): ?string
     {
-        return $this->reviews->title;
+        return $this->section->title;
     }
 
     public function query(): iterable

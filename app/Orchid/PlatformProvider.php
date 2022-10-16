@@ -41,12 +41,12 @@ class PlatformProvider extends OrchidServiceProvider
             Menu::make('Галерея')
                 ->icon('picture')
                 ->route('platform.gallery.index'),
-            Menu::make('Контакты')
-                ->icon('pointer')
-                ->route('platform.contacts.edit'),
-            Menu::make('Секции')
-                ->icon('menu')
-                ->route('platform.sections.index'),
+//            Menu::make('Контакты')
+//                ->icon('pointer')
+//                ->route('platform.contacts.edit'),
+//            Menu::make('Секции')
+//                ->icon('menu')
+//                ->route('platform.sections.index'),
         ];
     }
 

@@ -7,19 +7,20 @@ use App\Models\Section;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
+use Orchid\Support\Facades\Toast;
 
 class IndexScreen extends Screen
 {
-    private Section $gallery;
+    private Section $section;
 
     public function __construct()
     {
-        $this->gallery = Section::where('slug', 'gallery')->first();
+        $this->section = Section::where('slug', 'gallery')->first();
     }
 
     public function name(): ?string
     {
-        return $this->gallery->title;
+        return $this->section->title;
     }
 
     public function query(): iterable
@@ -43,4 +44,5 @@ class IndexScreen extends Screen
             Layout::view('panel.gallery')
         ];
     }
+
 }

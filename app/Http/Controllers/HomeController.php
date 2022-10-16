@@ -14,16 +14,25 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $sections = Section::get();
+        $sectionsList = [
+            'about' => Section::where('slug', 'about')->first(),
+            'directions' => Section::where('slug', 'directions')->first(),
+            'services' => Section::where('slug', 'services')->first(),
+            'doctors' => Section::where('slug', 'doctors')->first(),
+            'reviews' => Section::where('slug', 'reviews')->first(),
+            'gallery' => Section::where('slug', 'gallery')->first(),
+            'contacts' => Section::where('slug', 'contacts')->first(),
+        ];
+
         $directions = Direction::get();
         $services = Service::get();
         $doctors = Doctor::get();
         $reviews = Review::get();
         $gallery = Gallery::get();
-        $contacts = Contact::get();
+        $contacts = Contact::first();
 
         return view('home', compact(
-            'sections',
+            'sectionsList',
             'directions',
             'services',
             'doctors',

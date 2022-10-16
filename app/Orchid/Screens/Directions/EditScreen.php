@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Fields\Input;
+use Orchid\Screen\Fields\Picture;
 use Orchid\Screen\Fields\Quill;
+use Orchid\Support\Facades\Layout;
 use Orchid\Support\Facades\Toast;
 
 class EditScreen extends TranslationsScreen
@@ -36,6 +38,16 @@ class EditScreen extends TranslationsScreen
             Quill::make('direction.description')
                 ->placeholder('Введите описание')
                 ->title('Описание')
+        ];
+    }
+
+    protected function singleLanguageFields(): array
+    {
+        return [
+            Layout::rows([
+                Picture::make('icon_path')
+                    ->title('Прикрепите иконку')
+            ])
         ];
     }
 

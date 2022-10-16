@@ -1,7 +1,7 @@
 <section class="services">
     <div class="services__container _container">
         <div class="services__top">
-            <h5 class="services__title">Услуги</h5>
+            <h5 class="services__title">{{ $servicesData->getTranslation('title', 'ru') }}</h5>
             <div class="services__text">Последние достижения спортивной медицины доступны теперь не только профессиональным спортсменам, но и каждому казахстанцу!</div>
         </div>
         <div class="services__body">

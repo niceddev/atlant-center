@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
 
 class InsertSectionsTable extends Migration
 {
@@ -12,45 +10,45 @@ class InsertSectionsTable extends Migration
         DB::table('sections')->insert([
             [
                 'title' => json_encode([
-                    'ru' => 'О нас'
+                    'ru' => 'О нас',
                 ]),
-                'slug' => 'about'
+                'slug' => 'about',
             ],
             [
                 'title' => json_encode([
-                    'ru' => 'Направления'
+                    'ru' => 'Направления',
                 ]),
-                'slug' => 'directions'
+                'slug' => 'directions',
             ],
             [
                 'title' => json_encode([
-                    'ru' => 'Услуги'
+                    'ru' => 'Услуги',
                 ]),
-                'slug' => 'services'
+                'slug' => 'services',
             ],
             [
                 'title' => json_encode([
-                    'ru' => 'Врачи'
+                    'ru' => 'Врачи',
                 ]),
-                'slug' => 'doctors'
+                'slug' => 'doctors',
             ],
             [
                 'title' => json_encode([
-                    'ru' => 'Отзывы'
+                    'ru' => 'Отзывы',
                 ]),
-                'slug' => 'reviews'
+                'slug' => 'reviews',
             ],
             [
                 'title' => json_encode([
-                    'ru' => 'Галерея'
+                    'ru' => 'Галерея',
                 ]),
-                'slug' => 'gallery'
+                'slug' => 'gallery',
             ],
             [
                 'title' => json_encode([
-                    'ru' => 'Контакты'
+                    'ru' => 'Контакты',
                 ]),
-                'slug' => 'contacts'
+                'slug' => 'contacts',
             ],
         ]);
     }
