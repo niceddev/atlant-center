@@ -43,9 +43,11 @@ class EditScreen extends TranslationsScreen
                 ->placeholder('Введите специальность врача')
                 ->title('Специальность врача'),
             Quill::make('doctor.graphic')
+                ->toolbar(['text', 'color', 'header', 'list', 'format'])
                 ->placeholder('График')
                 ->title('График врача'),
             Quill::make('doctor.biography')
+                ->toolbar(['text', 'color', 'header', 'list', 'format'])
                 ->placeholder('Введите биографию врача')
                 ->title('Биография врача')
         ];

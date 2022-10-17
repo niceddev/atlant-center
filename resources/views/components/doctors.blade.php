@@ -13,7 +13,7 @@
                                 <div class="personal__photo"><img src="img/p1.jpg" alt="" class="personal__img"></div>
                                 <div class="personal__name">{{ $doctor->getTranslation('full_name', 'ru') }}</div>
                                 <div class="personal__work">{{ $doctor->getTranslation('speciality', 'ru') }}</div>
-                                <div class="personal__date">{{ $doctor->getTranslation('graphic', 'ru') }}</div>
+                                <div class="personal__date">{!! $doctor->getTranslation('graphic', 'ru') !!}</div>
                             </div>
                         </li>
                     @endforeach
@@ -32,11 +32,11 @@
                     <div class="personalpopup__title">
                         <div class="personalpopup__name">{{ $doctor->getTranslation('full_name', 'ru') }}</div>
                         <div class="personalpopup__work">{{ $doctor->getTranslation('speciality', 'ru') }}</div>
-                        <div class="personalpopup__date">{{ $doctor->getTranslation('graphic', 'ru') }}</div>
+                        <div class="personalpopup__date">{!! $doctor->getTranslation('graphic', 'ru') !!}</div>
                     </div>
                 </div>
                 <div class="personalpopup__text">
-                    {{ $doctor->getTranslation('biography', 'ru') }}
+                    {!! $doctor->getTranslation('biography', 'ru') !!}
                 </div>
                 <button class="popup__close close-popup"><img src="img/icons/close.svg" alt=""></button>
             </div>

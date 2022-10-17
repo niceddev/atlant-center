@@ -55,7 +55,7 @@
                                     {{ $doctor->getTranslation('speciality', $key) }}
                                 </th>
                                 <td class="py-4 px-6">
-                                    {{ $doctor->getTranslation('graphic', $key) }}
+                                    {!! $doctor->getTranslation('graphic', $key) !!}
                                 </td>
                                 <td class="py-4 px-6">
                                     {!!
