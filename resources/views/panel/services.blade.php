@@ -53,7 +53,7 @@
                                     !!}
                                 </td>
                                 <td class="py-4 px-6">
-                                    <a href="{{ route('platform.services.edit', $service->id) }}" class="hover:bg-gray-300 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+                                    <a href="{{ route('platform.services.edit', $service->id) }}" class="hover:bg-gray-300 text-white bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
                                         {{ __('common.edit') }}
                                     </a>
                                 </td>

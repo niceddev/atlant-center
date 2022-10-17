@@ -4,16 +4,16 @@
     </h1>
 @else
     <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left text-gray-500">
+        <table class="table-fixed w-full text-sm text-left text-gray-500">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
             <tr>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" class="py-3 px-6 w-3x">
                     №
                 </th>
-                <th scope="col" class="py-3 px-6 text-center">
+                <th scope="col" class="py-3 px-6">
                     {{ __('common.image') }}
                 </th>
-                <th scope="col" class="py-3 px-6">
+                <th scope="col" class="py-3 px-6 float-end">
                     {{ __('common.action') }}
                 </th>
             </tr>
@@ -25,10 +25,10 @@
                         {{ $loop->iteration }}
                     </th>
                     <td class="py-4 px-6">
-                        <img class="w-full max-h-24 rounded-t-lg" style="object-fit: contain" src="{{ asset($image->path) }}" alt="" />
+                        <img class="max-h-36" style="object-fit: contain" src="{{ asset($image->path) }}" alt="" />
                     </td>
-                    <td class="py-4 px-6">
-                        <a href="{{ route('platform.gallery.destroy', $image->id) }}" class="hover:bg-gray-300 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
+                    <td class="py-4 px-6 text-right">
+                        <a href="{{ route('platform.gallery.destroy', $image->id) }}" class="hover:bg-gray-300 text-white bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">
                             {{ __('common.edit') }}
                         </a>
                     </td>

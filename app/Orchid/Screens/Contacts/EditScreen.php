@@ -7,6 +7,7 @@ use App\Models\Section;
 use App\Orchid\Screens\Abstraction\TranslationsScreen;
 use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
+use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Quill;
 use Orchid\Screen\Fields\TextArea;
@@ -35,6 +36,7 @@ class EditScreen extends TranslationsScreen
                 ->title('Адрес')
                 ->required(),
             Quill::make('contacts.graphic')
+                ->toolbar(['text', 'color', 'header', 'list', 'format'])
                 ->placeholder('Введите график работы')
                 ->title('График работы'),
         ];
@@ -75,6 +77,8 @@ class EditScreen extends TranslationsScreen
     public function commandBar(): array
     {
         return [
+            Link::make(__('Cancel'))
+            ->href(route('platform.contacts.edit')),
             Button::make(__('Save'))
                 ->method('save'),
         ];

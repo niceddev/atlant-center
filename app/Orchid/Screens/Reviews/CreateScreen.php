@@ -37,6 +37,7 @@ class CreateScreen extends Screen
                     ->placeholder('Кратко о клиенте')
                     ->title('Доп. инфа'),
                 Quill::make('reviews.content')
+                    ->toolbar(['text', 'color', 'header', 'list', 'format'])
                     ->placeholder('Текст отзыва')
                     ->title('Отзыв')
                     ->required(),
