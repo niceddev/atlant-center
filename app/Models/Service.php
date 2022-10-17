@@ -12,7 +12,7 @@ class Service extends Model
     protected $fillable = [
         'title',
         'content',
-        'banner'
+        'banner',
     ];
 
     public $translatable = [

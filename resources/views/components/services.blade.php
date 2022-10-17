@@ -27,7 +27,7 @@
                 <div class="servicepopup__image"><img src="{{ $service->banner }}" alt=""></div>
                 <div class="servicepopup__title">{{ $service->getTranslation('title', 'ru') }}</div>
                 <div class="servicepopup__text">
-                    {{ $service->getTranslation('content', 'ru') }}
+                    {!! $service->getTranslation('content', 'ru') !!}
                 </div>
                 <button class="popup__close close-popup"><img src="img/icons/close.svg" alt=""></button>
             </div>
