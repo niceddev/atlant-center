@@ -15,11 +15,11 @@ class HomeController extends Controller
     public function index()
     {
         $about = About::first();
-        $directions = Direction::get();
-        $services = Service::get();
-        $doctors = Doctor::get();
-        $reviews = Review::get();
-        $gallery = Gallery::get();
+        $directions = Direction::orderBy('id')->get();
+        $services = Service::orderBy('id')->get();
+        $doctors = Doctor::orderBy('id')->get();
+        $reviews = Review::orderBy('id')->get();
+        $gallery = Gallery::orderBy('id')->get();
         $contacts = Contact::first();
 
         return view('home', compact(

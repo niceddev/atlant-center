@@ -10,7 +10,8 @@
         "production": "mix --production"
     },
     "dependencies": {
-        "axios": "^0.21.0"
+        "axios": "^0.21.0",
+        "swiper": "^8.4.4"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.12",

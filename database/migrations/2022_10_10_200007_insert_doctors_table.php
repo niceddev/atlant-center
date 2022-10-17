@@ -108,7 +108,7 @@ class InsertDoctorsTable extends Migration
                 'biography' =>  json_encode([
                     'ru' => null,
                 ]),
-                'photo' => '/img/p6.jpg',
+                'photo' => '/img/p7.jpg',
             ],
             [
                 'full_name' => json_encode([
@@ -123,7 +123,7 @@ class InsertDoctorsTable extends Migration
                 'biography' =>  json_encode([
                     'ru' => null,
                 ]),
-                'photo' => '/img/p7.jpg',
+                'photo' => '/img/p8.jpg',
             ],
         ]);
     }

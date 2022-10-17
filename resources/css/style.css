@@ -915,7 +915,7 @@ h5 {
     padding: 30px;
     background-color: #F8F8F9;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 28px;
     line-height: 140%;
     margin-bottom: 10px;
     position: relative;
@@ -943,7 +943,7 @@ h5 {
 }
 
 .review__name {
-    font-size: 18px;
+    font-size: 24px;
     color: #009BBF;
     max-width: 50%;
     text-align: right;
@@ -1054,7 +1054,7 @@ h5 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 0 50px 0;
+    margin: 0 0 100px 0;
     gap: 20px;
 }
 
@@ -1409,4 +1409,5 @@ h5 {
 
 section {
     padding: 0 40px 0 40px !important;
+    margin-bottom: 130px !important;
 }

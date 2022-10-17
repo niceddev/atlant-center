@@ -1,7 +1,7 @@
 <section class="review">
     <div class="review__container _container">
         <div class="review__body">
-            <h5 class="review__title">{{ $sections['reviews']->getTranslation('title', 'ru') }}</h5>
+            <h5 class="review__title" id="{{ $sections['reviews']->slug }}">{{ $sections['reviews']->getTranslation('title', 'ru') }}</h5>
             <ul class="review__list">
                 @foreach($reviews as $review)
                     <li class="review__items">

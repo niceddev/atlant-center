@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__container _container">
         <div class="footer__body">
-            <h5 class="footer__title">{{ $sections['contacts']->getTranslation('title', 'ru') }}</h5>
+            <h5 class="footer__title" id="{{ $sections['contacts']->slug }}">{{ $sections['contacts']->getTranslation('title', 'ru') }}</h5>
             <div class="footer__info">
                 <div class="footer__block contacts">
                     <h6 class="contacts__title">{{ __('common.our_contacts') }}</h6>

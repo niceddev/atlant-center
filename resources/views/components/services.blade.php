@@ -1,7 +1,7 @@
 <section class="services">
     <div class="services__container _container">
         <div class="services__top">
-            <h5 class="services__title">{{ $sections['services']->getTranslation('title', 'ru') }}</h5>
+            <h5 class="services__title" id="{{ $sections['services']->slug }}">{{ $sections['services']->getTranslation('title', 'ru') }}</h5>
             <div class="services__text">{{ $sections['services']->getTranslation('description', 'ru') }}</div>
         </div>
         <div class="services__body">
