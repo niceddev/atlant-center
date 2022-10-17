@@ -1147,9 +1147,9 @@ h5 {
 .gallery__list {
     display: -ms-grid;
     display: grid;
-    gap: 20px;
-    -ms-grid-columns: minmax(250px, 1fr);
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    -ms-grid-columns: minmax(350px, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
 .gallery__items {
@@ -1405,4 +1405,8 @@ h5 {
     left: -10px;
     background-color: #131414;
     border-radius: 50%;
+}
+
+section {
+    padding: 0 40px 0 40px !important;
 }
