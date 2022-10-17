@@ -5,16 +5,24 @@
                 <img src="img/logo.svg" alt="">
             </div>
             <div class="header__lang">
-                @foreach(config('app.languages') as $key => $lang)
-                    <select onchange="javascript:location.href = this.value;" class="lang__list">
-                        <option selected value={{ url('/'. $key) }}>{{ $lang }}</option>
-                    </select>
-                @endforeach
+                <select onchange="changeLanguage(this.value)" class="select__lang">
+                    @foreach(config('app.languages') as $key => $lang)
+                        <option
+                            {{ session()->has('lang') ? (session()->get('lang') === $key ? 'selected' : '') : '' }}
+                                value="{{ $key }}">
+                            {{ $lang }}
+                        </option>
+                    @endforeach
+                </select>
             </div>
             <nav class="header__menu menu">
                 <ul class="menu__list">
                     @foreach($sections as $key => $title)
-                        <li class="menu__items"><a href="#{{ $key }}" class="menu__item">{{ $title->getTranslation('title', 'ru') }}</a></li>
+                        <li class="menu__items">
+                            <a href="#{{ $key }}" class="menu__item">
+                                {{ $title->getTranslation('title', session()->get('lang', 'ru')) }}
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </nav>
@@ -41,3 +49,9 @@
         </div>
     </div>
 </header>
+
+<script>
+    function changeLanguage(lang){
+        window.location='{{url('change-lang')}}/' + lang;
+    }
+</script>

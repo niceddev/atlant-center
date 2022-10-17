@@ -1411,3 +1411,13 @@ section {
     padding: 0 40px 0 40px !important;
     margin-bottom: 130px !important;
 }
+
+.select__lang {
+    font-size: 16px;
+    padding: 6px;
+    background-color: #fff;
+}
+
+.select__lang option {
+    padding: 4px;
+}

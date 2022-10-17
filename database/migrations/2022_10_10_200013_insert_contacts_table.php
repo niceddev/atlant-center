@@ -16,7 +16,7 @@ class InsertContactsTable extends Migration
                 'whatsapp_number' => '+7 747 772 8938 (WhatsApp)',
                 'email'           => 'atlantmed@gmail.com',
                 'graphic'         =>  json_encode([
-                    'ru' => '<p>Понедельник - пятница:  08:00 - 20:00</p>
+                    session()->get('lang', ') => '<p>Понедельник - пятница:  08:00 - 20:00</p>
                   <p>Суббота: 10:00 - 16:00</p>
                   <p>Воскресенье: выходной</p>'
                 ]),

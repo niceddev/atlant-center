@@ -9,6 +9,7 @@ use App\Models\Doctor;
 use App\Models\Gallery;
 use App\Models\Review;
 use App\Models\Service;
+use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
@@ -32,4 +33,13 @@ class HomeController extends Controller
             'contacts',
         ));
     }
+
+    public function changeLanguage(string $lang)
+    {
+        App::setLocale($lang);
+        session()->put('lang', $lang);
+
+        return redirect()->back();
+    }
+
 }
