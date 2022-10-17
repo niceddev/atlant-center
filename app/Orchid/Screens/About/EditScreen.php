@@ -7,7 +7,7 @@ use App\Models\Section;
 use Illuminate\Http\Request;
 use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Fields\Input;
-use Orchid\Screen\Fields\SimpleMDE;
+use Orchid\Screen\Fields\Quill;
 use Orchid\Support\Facades\Toast;
 use App\Orchid\Screens\Abstraction\TranslationsScreen;
 
@@ -40,12 +40,14 @@ class EditScreen extends TranslationsScreen
                 ->placeholder('Введите заголовок')
                 ->title('Заголовок')
                 ->required(),
-            SimpleMDE::make('about.description')
+            Quill::make('about.description')
+                ->toolbar(['text', 'color', 'header', 'list', 'format'])
                 ->placeholder('Введите описание')
                 ->title('Описание'),
             Input::make('about.list_title')
                 ->title('Заголовок списка'),
-            SimpleMDE::make('about.list')
+            Quill::make('about.list')
+                ->toolbar(['text', 'color', 'header', 'list', 'format'])
                 ->title('Список'),
         ];
     }

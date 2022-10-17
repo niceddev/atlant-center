@@ -37,7 +37,101 @@ class InsertDoctorsTable extends Migration
                 ]),
                 'photo' => '/img/p1.jpg',
             ],
-
+            [
+                'full_name' => json_encode([
+                    'ru' => 'Татьяна Приходько',
+                ]),
+                'speciality' => json_encode([
+                    'ru' => 'Врач-реабилитолог',
+                ]),
+                'graphic' =>  json_encode([
+                    'ru' => 'ПН,СР,ПТ 9:00-17:00
+ВТ,ЧТ 12:00-20:00
+СБ 10:00-16:00',
+                ]),
+                'biography' =>  json_encode([
+                    'ru' => null,
+                ]),
+                'photo' => '/img/p2.jpg',
+            ],
+            [
+                'full_name' => json_encode([
+                    'ru' => 'Азамат Естаев',
+                ]),
+                'speciality' => json_encode([
+                    'ru' => 'Врач-травматолог, реабилитолог',
+                ]),
+                'graphic' =>  json_encode([
+                    'ru' => 'ПН-ПТ 10:00-18:00
+СБ 10:00-16:00',
+                ]),
+                'biography' =>  json_encode([
+                    'ru' => null,
+                ]),
+                'photo' => '/img/p3.jpg',
+            ],
+            [
+                'full_name' => json_encode([
+                    'ru' => 'Жанат Жандаев',
+                ]),
+                'speciality' => json_encode([
+                    'ru' => 'Врач-реабилитолог',
+                ]),
+                'graphic' =>  json_encode([
+                    'ru' => 'ПН-ПТ 17:00-20:00
+СБ 10:00-16:00',
+                ]),
+                'biography' =>  json_encode([
+                    'ru' => null,
+                ]),
+                'photo' => '/img/p4.jpg',
+            ],
+            [
+                'full_name' => json_encode([
+                    'ru' => 'Александр Мирончик',
+                ]),
+                'speciality' => json_encode([
+                    'ru' => 'Инструктор ЛФК',
+                ]),
+                'graphic' =>  json_encode([
+                    'ru' => null,
+                ]),
+                'biography' =>  json_encode([
+                    'ru' => null,
+                ]),
+                'photo' => '/img/p5.jpg',
+            ],
+            [
+                'full_name' => json_encode([
+                    'ru' => 'Ильхом Медаев',
+                ]),
+                'speciality' => json_encode([
+                    'ru' => 'Массажист',
+                ]),
+                'graphic' =>  json_encode([
+                    'ru' => 'ПН-ПТ 10:00-18:00
+СБ 10:00-16:00',
+                ]),
+                'biography' =>  json_encode([
+                    'ru' => null,
+                ]),
+                'photo' => '/img/p6.jpg',
+            ],
+            [
+                'full_name' => json_encode([
+                    'ru' => 'Асылбек Дабылов',
+                ]),
+                'speciality' => json_encode([
+                    'ru' => 'Массажист',
+                ]),
+                'graphic' =>  json_encode([
+                    'ru' => null,
+                ]),
+                'biography' =>  json_encode([
+                    'ru' => null,
+                ]),
+                'photo' => '/img/p7.jpg',
+            ],
         ]);
     }
 

@@ -22,12 +22,16 @@
         :doctors='$doctors'
     ></x-doctors>
 
-{{--    <x-reviews--}}
-{{--        :sections='$sections'--}}
-{{--    ></x-reviews>--}}
+    <x-reviews
+        :reviews='$reviews'
+    ></x-reviews>
 
-{{--    <x-contacts--}}
-{{--        :sections='$sections'--}}
-{{--    ></x-contacts>--}}
+    <x-gallery
+        :gallery='$gallery'
+    ></x-gallery>
+
+    <x-contacts
+        :contacts='$contacts'
+    ></x-contacts>
 
 </x-layout>
