@@ -25,19 +25,19 @@ services:
         ports:
             - 9009:9000
 
-    postgres:
-        container_name: atlant_postgres
+    mysql:
+        container_name: atlant_mysql
         restart: always
-        image: postgres:14
+        image: mysql
         environment:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: postgres
-            PGDATA: /data/postgres
+            MYSQL_USER: atlant_u
+            MYSQL_DATABASE: atlant_db
+            MYSQL_ROOT_PASSWORD: 123456
         volumes:
-            - atlant-postgres:/data/postgres
+            - atlant-mysql:/var/lib/mysql
         ports:
-            - 5439:5432
+            - 3309:3306
 
 volumes:
-    atlant-postgres:
+    atlant-mysql:
         external: true
