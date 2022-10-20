@@ -32,6 +32,7 @@ services:
         environment:
             MYSQL_USER: atlant_u
             MYSQL_DATABASE: atlant_db
+            MYSQL_PASSWORD: 123456
             MYSQL_ROOT_PASSWORD: 123456
         volumes:
             - atlant-mysql:/var/lib/mysql
