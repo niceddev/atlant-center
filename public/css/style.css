@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6 {
     /*-webkit-box-flex: 0;*/
     /*-ms-flex: 0 1 16.7%;*/
     /*flex: 0 1 16.7%;*/
-    /*position: absolute;*/
+    position: absolute;
 }
 
 .footer__info {
