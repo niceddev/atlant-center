@@ -14,8 +14,8 @@
         {{ $slot }}
     </div>
 
-    <script src="{{ mix('js/functions.js') }}"></script>
-    <script src="{{ mix('js/popup.js') }}"></script>
+    <script type="module" src="{{ mix('js/functions.js') }}"></script>
+    <script type="module" src="{{ mix('js/popup.js') }}"></script>
 
 </body>
 </html>

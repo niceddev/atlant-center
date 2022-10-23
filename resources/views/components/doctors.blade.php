@@ -5,10 +5,10 @@
             <div class="personal__text">{{ $sections['doctors']->getTranslation('description', session()->get('lang', 'ru')) }}</div>
         </div>
         <div class="personal__body">
-            <div class="personal__slider swiper">
-                <ul class="personal__list swiper-wrapper">
+            <div class="personal__slider">
+                <ul class="personal__list">
                     @foreach($doctors as $doctor)
-                        <li class="personal__item swiper-slide">
+                        <li class="personal__item">
                             <div data="doc-{{ $doctor->id }}" class="personal__cart popup-link">
                                 <div class="personal__photo"><img src="{{ $doctor->photo }}" alt="" class="personal__img"></div>
                                 <div class="personal__name" style="font-weight: 600">{{ $doctor->getTranslation('full_name', session()->get('lang', 'ru')) }}</div>
