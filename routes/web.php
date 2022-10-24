@@ -14,4 +14,9 @@ Route::group(['middleware' => 'language'], function() {
         'changeLanguage'
     ])->name('change-lang');
 
+    Route::get('/send-mail', [
+        \App\Http\Controllers\MailController::class,
+        'sendMail'
+    ])->name('sendMail');
+
 });

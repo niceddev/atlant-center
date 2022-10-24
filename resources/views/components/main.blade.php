@@ -17,10 +17,19 @@
         <div class="popup__body">
             <div class="popup__title">Записаться на консультацию</div>
             <div class="popup__form form">
-                <form action="" class="form__body">
-                    <div class="form__item"><label for="name">Ваше имя</label><input type="text" id="name"></div>
-                    <div class="form__item"><label for="phone">Номер телефона</label><input type="text" id="phone"></div>
-                    <div class="form__item"><label for="message">Текст</label><textarea id="message"></textarea></div>
+                <form action="{{ route('sendMail') }}" method="GET" class="form__body">
+                    <div class="form__item">
+                        <label for="name">Ваше имя</label>
+                        <input name="name" type="text" id="name" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="phone">Номер телефона</label>
+                        <input name="phone" type="text" id="phone" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="message">Текст</label>
+                        <textarea name="message" id="message"></textarea>
+                    </div>
                     <button type="submit">Отправить</button>
                 </form>
             </div>

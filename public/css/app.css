@@ -461,8 +461,14 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.static {
+  position: static !important;
+}
 .fixed {
   position: fixed !important;
+}
+.absolute {
+  position: absolute !important;
 }
 .relative {
   position: relative !important;
@@ -489,6 +495,9 @@ video {
 .inline-block {
   display: inline-block !important;
 }
+.inline {
+  display: inline !important;
+}
 .flex {
   display: flex !important;
 }
@@ -509,6 +518,9 @@ video {
 }
 .table-fixed {
   table-layout: fixed !important;
+}
+.border-collapse {
+  border-collapse: collapse !important;
 }
 .resize {
   resize: both !important;
@@ -531,6 +543,9 @@ video {
 .rounded-t-lg {
   border-top-left-radius: 0.5rem !important;
   border-top-right-radius: 0.5rem !important;
+}
+.border {
+  border-width: 1px !important;
 }
 .border-b-2 {
   border-bottom-width: 2px !important;
