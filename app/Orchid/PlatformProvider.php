@@ -47,6 +47,9 @@ class PlatformProvider extends OrchidServiceProvider
             Menu::make('Секции')
                 ->icon('menu')
                 ->route('platform.sections.index'),
+            Menu::make('Email для обратной связи')
+                ->icon('call-in')
+                ->route('platform.email_for_consultation.edit'),
         ];
     }
 

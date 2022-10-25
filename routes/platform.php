@@ -71,3 +71,7 @@ Route::screen('/sections', \App\Orchid\Screens\Sections\IndexScreen::class)
 
 Route::screen('/sections/form/{section}', \App\Orchid\Screens\Sections\EditScreen::class)
     ->name('platform.sections.edit');
+
+//Email for consultation
+Route::screen('/email-for-consultation/form', \App\Orchid\Screens\EmailForConsultation\EditScreen::class)
+    ->name('platform.email_for_consultation.edit');
