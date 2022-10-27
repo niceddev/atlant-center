@@ -27,14 +27,18 @@
                 </ul>
             </nav>
             <div class="header__links">
-                <a href="tel:+77172728938" class="header__phone">
+                <a href="tel:{{ $contacts->phone_number }}" class="header__phone">
                     {{ $contacts->phone_number }}
                 </a>
                 <div class="header__social social">
                     <ul class="social__list">
-                        <li class="social__items"><a href="" class="social__icon"><img src="img/icons/whatsapp.svg" alt=""></a></li>
                         <li class="social__items">
-                            <a href="{{ $contacts->instagram_link }}" class="social__icon">
+                            <a target="_blank" href="https://wa.me/{{ $contacts->whatsapp_number }}" class="social__icon">
+                                <img src="img/icons/whatsapp.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="social__items">
+                            <a target="_blank" href="{{ $contacts->instagram_link }}" class="social__icon">
                                 <img src="img/icons/instagram.svg" alt="">
                             </a>
                         </li>

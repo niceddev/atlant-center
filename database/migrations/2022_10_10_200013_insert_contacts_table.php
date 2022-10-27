@@ -13,7 +13,7 @@ class InsertContactsTable extends Migration
                     'ru' => 'г. Астана, пр. Туран, 6/1a, здание Национального Теннисного Центра (СК «Даулет»)'
                 ]),
                 'phone_number'    => '+7 (7172) 728 938',
-                'whatsapp_number' => '+7 747 772 8938 (WhatsApp)',
+                'whatsapp_number' => '77477728938',
                 'email'           => 'atlantmed@gmail.com',
                 'graphic'         =>  json_encode([
                     'ru' => '<p>Понедельник - пятница:  08:00 - 20:00</p>

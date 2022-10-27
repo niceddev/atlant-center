@@ -26,8 +26,8 @@
                         <h6 class="contacts__title">{{ __('common.social_network') }}</h6>
                         <div class="contacts__info">
                             <div class="contacts__social">
-                                <a href="" class="contacts__icon"><img src="img/icons/insta.svg" alt=""></a>
-                                <a href="" class="contacts__icon"><img src="img/icons/whp.svg" alt=""></a>
+                                <a target="_blank" href="{{ $contacts->instagram_link }}" class="contacts__icon"><img src="img/icons/insta.svg" alt=""></a>
+                                <a target="_blank" href="https://wa.me/{{ $contacts->whatsapp_number }}" class="contacts__icon"><img src="img/icons/whp.svg" alt=""></a>
                             </div>
                         </div>
                     </div>
