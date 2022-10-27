@@ -7,8 +7,8 @@
                     <li class="activities__item">
                         <div class="activities__block block">
                             <div class="block__info">
-                                <div class="block__lable">{{ $direction->getTranslation('title', session()->get('lang', 'ru')) }}</div>
-                                <div class="block__text">{{ $direction->getTranslation('description', session()->get('lang', 'ru')) }}</div>
+                                <div class="block__lable">{!! $direction->getTranslation('title', session()->get('lang', 'ru')) !!}</div>
+                                <div class="block__text">{!! $direction->getTranslation('description', session()->get('lang', 'ru')) !!}</div>
                             </div>
                             <div class="block__icon"><img src="{{ $direction->icon_path }}" alt=""></div>
                         </div>
