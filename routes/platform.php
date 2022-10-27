@@ -4,8 +4,8 @@ use App\Orchid\Screens\PlatformScreen;
 use Illuminate\Support\Facades\Route;
 
 // Main
-Route::screen('/main', PlatformScreen::class)
-    ->name('platform.main');
+Route::screen('/main', \App\Orchid\Screens\Main\EditScreen::class)
+    ->name('platform.main.edit');
 
 //About
 Route::screen('/about/form', \App\Orchid\Screens\About\EditScreen::class)

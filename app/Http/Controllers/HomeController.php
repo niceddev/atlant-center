@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Direction;
 use App\Models\Doctor;
 use App\Models\Gallery;
+use App\Models\Main;
 use App\Models\Review;
 use App\Models\Service;
 use Illuminate\Support\Facades\App;
@@ -15,6 +16,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $main = Main::first();
         $about = About::first();
         $directions = Direction::orderBy('id')->get();
         $services = Service::orderBy('id')->get();
@@ -24,6 +26,7 @@ class HomeController extends Controller
         $contacts = Contact::first();
 
         return view('home', compact(
+            'main',
             'about',
             'directions',
             'services',

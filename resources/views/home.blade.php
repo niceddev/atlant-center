@@ -4,7 +4,9 @@
         :contacts='$contacts'
     ></x-header>
 
-    <x-main></x-main>
+    <x-main
+        :main="$main"
+    ></x-main>
 
     <x-about
         :about='$about'

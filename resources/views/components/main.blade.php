@@ -1,9 +1,9 @@
-<section class="main">
+<section class="main" style="background-image: url('..{{ $main->image_path }}');">
     <div class="main__container _container">
         <div class="main__body">
-            <h1 class="main__title">Центр ортопедической и спортивной реабилитации «Атлант»</h1>
-            <div class="main__text">Первый в Казахстане специализированный центр, оказывающий высококвалифицированную медицинскую помощь в области функционального восстановления и ортопедической реабилитации, соответствующей мировым стандартам.</div>
-            <button data="popup" class="main__btn popup-link">Записаться на консультацию</button>
+            <h1 class="main__title">{{ $main->getTranslation('title', session()->get('lang', 'ru')) }}</h1>
+            <div class="main__text">{!! $main->getTranslation('description', session()->get('lang', 'ru')) !!}</div>
+            <button data="popup" class="main__btn popup-link">{{ $main->getTranslation('button_title', session()->get('lang', 'ru')) }}</button>
             <button class="main__video video">
                 <div class="video__icon"></div>
                 <div class="video__label">Смотреть видео</div>
@@ -15,7 +15,7 @@
 <div class="popup" id="popup">
     <div class="popup__container">
         <div class="popup__body">
-            <div class="popup__title">Записаться на консультацию</div>
+            <div class="popup__title"{{ $main->getTranslation('button_title', session()->get('lang', 'ru')) }}></div>
             <div class="popup__form form">
                 <form action="{{ route('sendMail') }}" method="GET" class="form__body">
                     <div class="form__item">
