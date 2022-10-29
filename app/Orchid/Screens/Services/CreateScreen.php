@@ -34,6 +34,7 @@ class CreateScreen extends TranslationsScreen
                 ->title('Заголовок')
                 ->required(),
             Quill::make('services.content')
+                ->toolbar(['text', 'color', 'header', 'list', 'format'])
                 ->placeholder('Введите описание')
                 ->title('Описание')
         ];
