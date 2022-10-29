@@ -46,6 +46,7 @@ class EditScreen extends TranslationsScreen
         return [
             Layout::rows([
                 Picture::make('icon_path')
+                    ->storage('public')
                     ->title('Прикрепите иконку')
             ])
         ];

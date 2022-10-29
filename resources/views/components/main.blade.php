@@ -1,4 +1,4 @@
-<section class="main" style="background-image: url('..{{ $main->image_path }}');">
+<section class="main" style="background-image: url('{{ asset($main->image_path) }}');">
     <div class="main__container _container">
         <div class="main__body">
             <h1 class="main__title">{{ $main->getTranslation('title', session()->get('lang', 'ru')) }}</h1>

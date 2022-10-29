@@ -50,6 +50,7 @@ class EditScreen extends TranslationsScreen
         return [
             Layout::rows([
                 Picture::make('service.banner')
+                    ->storage('public')
                     ->targetUrl()
                     ->title('Баннер'),
             ])

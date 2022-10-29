@@ -29,6 +29,7 @@ class CreateScreen extends Screen
         return [
             Layout::rows([
                 Picture::make('gallery.path')
+                    ->storage('public')
                     ->targetRelativeUrl()
                     ->title('Картинки')
                     ->required(),

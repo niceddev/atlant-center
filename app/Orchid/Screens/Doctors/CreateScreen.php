@@ -31,6 +31,7 @@ class CreateScreen extends TranslationsScreen
         return [
             Layout::rows([
                 Picture::make('doctors.photo')
+                    ->storage('public')
                     ->targetUrl()
                     ->title('Фото врача'),
             ])

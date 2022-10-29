@@ -10,7 +10,7 @@
                     @foreach($doctors as $doctor)
                         <li class="personal__item">
                             <div data="doc-{{ $doctor->id }}" class="personal__cart popup-link">
-                                <div class="personal__photo"><img src="{{ $doctor->photo }}" alt="" class="personal__img"></div>
+                                <div class="personal__photo"><img src="{{ asset($doctor->photo) }}" alt="" class="personal__img"></div>
                                 <div class="personal__name" style="font-weight: 600">{{ $doctor->getTranslation('full_name', session()->get('lang', 'ru')) }}</div>
                                 <div class="personal__work">{{ $doctor->getTranslation('speciality', session()->get('lang', 'ru')) }}</div>
                                 <div class="personal__date">{!! $doctor->getTranslation('graphic', session()->get('lang', 'ru')) !!}</div>
@@ -28,7 +28,7 @@
         <div class="popup__container">
             <div class="popup__body personalpopup">
                 <div class="personalpopup__info">
-                    <div class="personalpopup__image"><img src="{{ $doctor->photo }}" alt=""></div>
+                    <div class="personalpopup__image"><img src="{{ asset($doctor->photo) }}" alt=""></div>
                     <div class="personalpopup__title">
                         <div class="personalpopup__name" style="font-weight: 600">{{ $doctor->getTranslation('full_name', session()->get('lang', 'ru')) }}</div>
                         <div class="personalpopup__work">{{ $doctor->getTranslation('speciality', session()->get('lang', 'ru')) }}</div>

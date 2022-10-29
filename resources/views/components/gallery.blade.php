@@ -6,7 +6,7 @@
                 @foreach($gallery as $image)
                     <li data="img-{{ $image->id }}" class="gallery__items popup-link">
                         <a href="" class="gallery__item">
-                            <img src="{{ $image->path }}" alt="">
+                            <img src="{{ asset($image->path) }}" alt="">
                         </a>
                     </li>
                 @endforeach
@@ -18,7 +18,7 @@
 @foreach($gallery as $image)
     <div class="popup" id="img-{{ $image->id }}">
         <div class="popup__container">
-            <img src="{{ $image->path }}" alt="">
+            <img src="{{ asset($image->path) }}" alt="">
         </div>
     </div>
 @endforeach

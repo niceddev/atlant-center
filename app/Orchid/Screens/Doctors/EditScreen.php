@@ -58,6 +58,7 @@ class EditScreen extends TranslationsScreen
         return [
             Layout::rows([
                 Picture::make('doctor.photo')
+                    ->storage('public')
                     ->targetUrl()
                     ->title('Фото врача'),
             ])

@@ -44,6 +44,7 @@ class CreateScreen extends TranslationsScreen
         return [
             Layout::rows([
                 Picture::make('services.banner')
+                ->storage('public')
                 ->targetUrl()
                 ->title('Баннер'),
             ])

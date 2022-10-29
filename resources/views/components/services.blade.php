@@ -24,7 +24,7 @@
     <div class="popup" id="{{ $key }}">
         <div class="popup__container">
             <div class="popup__body servicepopup">
-                <div class="servicepopup__image"><img src="{{ $service->banner }}" alt=""></div>
+                <div class="servicepopup__image"><img src="{{ asset($service->banner) }}" alt=""></div>
                 <div class="servicepopup__title">{{ $service->getTranslation('title', session()->get('lang', 'ru')) }}</div>
                 <div class="servicepopup__text">
                     {!! $service->getTranslation('content', session()->get('lang', 'ru')) !!}

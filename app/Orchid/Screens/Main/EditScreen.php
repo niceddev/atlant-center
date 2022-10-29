@@ -38,6 +38,7 @@ class EditScreen extends TranslationsScreen
                 ->title('Описание')
                 ->required(),
             Picture::make('main.image_path')
+                ->storage('public')
                 ->targetRelativeUrl()
                 ->title('Картинка'),
             Input::make('main.button_title')
