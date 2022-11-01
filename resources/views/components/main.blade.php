@@ -4,10 +4,10 @@
             <h1 class="main__title">{{ $main->getTranslation('title', session()->get('lang', 'ru')) }}</h1>
             <div class="main__text">{!! $main->getTranslation('description', session()->get('lang', 'ru')) !!}</div>
             <button data="popup" class="main__btn popup-link">{{ $main->getTranslation('button_title', session()->get('lang', 'ru')) }}</button>
-            <button class="main__video video">
+            <a href="{{ $main->video_link ?? '#' }}" target="_blank" class="main__video video">
                 <div class="video__icon"></div>
                 <div class="video__label">Смотреть видео</div>
-            </button>
+            </a>
         </div>
     </div>
 </section>

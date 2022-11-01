@@ -13,6 +13,7 @@ class Main extends Model
         'title',
         'description',
         'button_title',
+        'video_link',
     ];
 
     public $translatable = [

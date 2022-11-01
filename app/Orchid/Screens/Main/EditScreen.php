@@ -8,6 +8,7 @@ use Orchid\Screen\Actions\Button;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Picture;
 use Orchid\Screen\Fields\Quill;
+use Orchid\Support\Facades\Layout;
 use Orchid\Support\Facades\Toast;
 use App\Orchid\Screens\Abstraction\TranslationsScreen;
 
@@ -47,6 +48,19 @@ class EditScreen extends TranslationsScreen
                 ->required(),
         ];
     }
+
+    protected function singleLanguageFields(): array
+    {
+        return [
+            Layout::rows([
+                Input::make('main.video_link')
+                    ->placeholder('Введите ссылку на видео')
+                    ->type('url')
+                    ->title('Введите ссылку видео'),
+            ])
+        ];
+    }
+
 
     public function save(Request $request)
     {
