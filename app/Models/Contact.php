@@ -15,7 +15,8 @@ class Contact extends Model
         'whatsapp_number',
         'email',
         'graphic',
-        'instagram_link'
+        'instagram_link',
+        'map_link',
     ];
 
     public $translatable = [

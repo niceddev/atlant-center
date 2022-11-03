@@ -60,6 +60,10 @@ class EditScreen extends TranslationsScreen
                     ->placeholder('Введите ссылку на инстаграм')
                     ->type('url')
                     ->title('Введите ссылку инстаграмма'),
+                Input::make('contacts.map_link')
+                    ->placeholder('Введите ссылку на карту')
+                    ->type('url')
+                    ->title('Введите ссылку на карту'),
             ])
         ];
     }

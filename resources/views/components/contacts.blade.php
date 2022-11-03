@@ -9,7 +9,7 @@
                         <div class="contacts__info">
                             <div class="contacts__adress">
                                 <p>{{ $contacts->getTranslation('address', session()->get('lang', 'ru')) }}</p>
-                                <a href="">Показать на карте</a>
+                                <a target="_blank" href="{{ $contacts->map_link }}">Показать на карте</a>
                             </div>
                             <div class="contacts__phone"><a href="tel:{{ $contacts->phone_number }}">{{ $contacts->phone_number }}</a></div>
                             <div class="contacts__phone"><a href="">{{ $contacts->whatsapp_number }}</a></div>
