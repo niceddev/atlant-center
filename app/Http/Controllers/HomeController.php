@@ -8,6 +8,7 @@ use App\Models\Direction;
 use App\Models\Doctor;
 use App\Models\Gallery;
 use App\Models\Main;
+use App\Models\Partner;
 use App\Models\Review;
 use App\Models\Service;
 use Illuminate\Support\Facades\App;
@@ -23,6 +24,7 @@ class HomeController extends Controller
         $doctors = Doctor::orderBy('id')->get();
         $reviews = Review::orderBy('id')->get();
         $gallery = Gallery::orderBy('id')->get();
+        $partners = Partner::orderBy('id')->get();
         $contacts = Contact::first();
 
         return view('home', compact(
@@ -33,6 +35,7 @@ class HomeController extends Controller
             'doctors',
             'reviews',
             'gallery',
+            'partners',
             'contacts',
         ));
     }

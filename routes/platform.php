@@ -61,6 +61,16 @@ Route::screen('/gallery/form', \App\Orchid\Screens\Gallery\CreateScreen::class)
 Route::screen('/gallery/{section}', \App\Orchid\Screens\Gallery\DestroyScreen::class)
     ->name('platform.gallery.destroy');
 
+//Partners
+Route::screen('/partners', \App\Orchid\Screens\Partners\IndexScreen::class)
+    ->name('platform.partners.index');
+
+Route::screen('/partners/form', \App\Orchid\Screens\Partners\CreateScreen::class)
+    ->name('platform.partners.create');
+
+Route::screen('/partners/form/{section}', \App\Orchid\Screens\Partners\EditScreen::class)
+    ->name('platform.partners.edit');
+
 //Contacts
 Route::screen('/contacts/form', \App\Orchid\Screens\Contacts\EditScreen::class)
     ->name('platform.contacts.edit');

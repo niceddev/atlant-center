@@ -34,6 +34,7 @@ class ViewServiceProvider extends ServiceProvider
                 'doctors' => Section::where('slug', 'doctors')->first(),
                 'reviews' => Section::where('slug', 'reviews')->first(),
                 'gallery' => Section::where('slug', 'gallery')->first(),
+                'partners' => Section::where('slug', 'partners')->first(),
                 'contacts' => Section::where('slug', 'contacts')->first(),
             ]);
         }

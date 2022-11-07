@@ -15,5 +15,6 @@ return [
     'opening_hours'  => 'Часы работы',
     'social_network' => 'Социальные сети',
     'image'          => 'Картинка',
+    'link'           => 'Ссылка',
 
 ];

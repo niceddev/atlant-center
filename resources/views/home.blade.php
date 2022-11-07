@@ -32,6 +32,10 @@
         :gallery='$gallery'
     ></x-gallery>
 
+    <x-partners
+        :partners='$partners'
+    ></x-partners>
+
     <x-contacts
         :contacts='$contacts'
     ></x-contacts>

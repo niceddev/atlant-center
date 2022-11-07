@@ -15,5 +15,6 @@ return [
     'opening_hours'  => 'Opening hours',
     'social_network' => 'Social networks',
     'image'          => 'Image',
+    'link'           => 'link',
 
 ];
