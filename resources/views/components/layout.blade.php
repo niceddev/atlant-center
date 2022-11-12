@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="{{ mix('css/style.css') }}">
 
     <title>Atlant</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9S8HZE7ZD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-C9S8HZE7ZD');
+    </script>
 </head>
 <body>
 

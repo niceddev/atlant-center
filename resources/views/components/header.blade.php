@@ -2,7 +2,9 @@
     <div class="header__container">
         <div class="header__body">
             <div class="header__logo">
-                <img src="img/logo.svg" alt="">
+                <a href="{{ config('app.url') }}">
+                    <img src="img/logo.svg" alt="">
+                </a>
             </div>
             <div class="header__lang">
                 <select onchange="changeLanguage(this.value)" class="select__lang">
